@@ -66,7 +66,8 @@ for stock in pair_list:
             pair_set["Pair"] = stock.replace(".IS", "")
             pair_returns = pair_dataset.pct_change().dropna(how="all")
             if((shapiro(main_returns)[1] > 0.05 and shapiro(pair_returns)[1] > 5) or \
-               (skew(main_returns) < 2 and skew(main_returns) > -2 and skew(pair_returns)<2 and kurtosis(pair_returns)>-2)
+               (skew(main_returns) < 2 and skew(main_returns) > -2 and skew(pair_returns)<2 and skew(pair_returns)>-2 and
+                kurtosis(main_returns) < 2 and kurtosis(main_returns) > -2 and kurtosis(pair_returns)<2 and kurtosis(pair_returns)>-2)
                ):
                 correlation_method = "Pearson"
                 correlation = round(pearsonr(pair_dataset, main_dataset)[0],5)
