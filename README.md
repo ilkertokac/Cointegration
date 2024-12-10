@@ -28,3 +28,8 @@ pip install -r requirements.txt
 # Output
 Stock 1	Stock 2	Beta	Intercept	Lag
 ABC	      XYZ	  1.05	  0.03	   2
+
+# Author
+
+Developed by İlker Tokaç.
+For inquiries, reach out at ilkrtkc34@gmail.com.
